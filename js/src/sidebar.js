@@ -161,11 +161,7 @@ const Sidebar = (($) => {
         let link = value
         let cUrl
 
-        if (link.classList.contains(ClassName.NAV_LINK_QUERIED)) {
-          cUrl = String(window.location)
-        } else {
-          cUrl = String(window.location).split('?')[0]
-        }
+        cUrl = String(window.location)
 
         if (cUrl.substr(cUrl.length - 1) === '#') {
           cUrl = cUrl.slice(0, -1)

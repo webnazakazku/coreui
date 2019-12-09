@@ -1,6 +1,5 @@
 import "core-js/modules/es.array.find";
 import "core-js/modules/es.array.slice";
-import "core-js/modules/es.string.split";
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
@@ -154,12 +153,7 @@ var Sidebar = function ($) {
       $(Selector.NAVIGATION).find(Selector.NAV_LINK).each(function (key, value) {
         var link = value;
         var cUrl;
-
-        if (link.classList.contains(ClassName.NAV_LINK_QUERIED)) {
-          cUrl = String(window.location);
-        } else {
-          cUrl = String(window.location).split('?')[0];
-        }
+        cUrl = String(window.location);
 
         if (cUrl.substr(cUrl.length - 1) === '#') {
           cUrl = cUrl.slice(0, -1);
